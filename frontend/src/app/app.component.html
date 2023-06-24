@@ -1,0 +1,8 @@
+<app-add-todo-form (formSubmit)="createTodo($event)"></app-add-todo-form>
+<div>
+  <div class="todo-wrapper" *ngFor="let todo of todos">
+    <p>{{ todo.title }}</p>
+    <input type="checkbox" [checked]="todo.isCompleted" (change)="toggleTodo(todo)">
+    <button type="button" (click)="deleteTodo(todo)">DELETE</button>
+  </div>
+</div>
